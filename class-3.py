@@ -2,7 +2,7 @@ import requests
 import time
 import csv
 from bs4 import BeautifulSoup
-URL ="https://www.majortests.com/word-lists/word-list-{0:02d}.html"
+URL ="https://www.majortests.com/word-lists/word-list-{0:02d}.html" #將數列部分改為字串的概念去做列表就不會有010的狀況出現
 
 def generate_urls(url, start_page , end_page):
     urls = []
