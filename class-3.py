@@ -2,7 +2,7 @@ import requests
 import time
 import csv
 from bs4 import BeautifulSoup
-URL ="https://www.majortests.com/word-lists/word-list-0{0}.html"
+URL ="https://www.majortests.com/word-lists/word-list-{0:02d}.html"
 
 def generate_urls(url, start_page , end_page):
     urls = []
@@ -55,7 +55,7 @@ def save_to_csv(words, file): #存檔
             writer.writerow(word)
 
 if __name__ == "__main__":
-    urlx = generate_urls(URL , 1 , 10)
+    urlx = generate_urls(URL , 1 , 11)
     eng_words = web_scraping_bot(urlx)
     for item in eng_words: #可有可無
         print(item)
